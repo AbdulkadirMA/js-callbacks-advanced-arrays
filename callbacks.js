@@ -18,28 +18,54 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
     console.log(first)
   });
 */
+const items=['Abdulkadir', 'Ali', 'Geedi', 'Duraan', 'Mohamed'];
+function firstItem(arr, cb){
+  return cb(items[0])
+}
+firstItem(items, function(first){
+  console.log(first)
+});
 
-
+//find array lenght
 function getLength(arr, cb) {
-  // getLength passes the length of the array into the callback.
+  return cb(items.length)
 }
+getLength(items, function(Arraylength){
+ console.log(Arraylength)
+});
 
-function last(arr, cb) {
+
   // last passes the last item of the array into the callback.
-}
 
-function sumNums(x, y, cb) {
+  const items=['Abdulkadir', 'Ali', 'Geedi', 'Duraan', 'Mohamed'];
+  function firstItem(arr, cb){
+    return cb(items[4])
+  }
+  firstItem(items, function(first){
+    console.log(first)
+  });
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+function sumNums(x, y, cb){
+  return cb(x,y)
 }
+let add= (x,y)=>x+y
+console.log(calc(5,8,add))
 
+ // multiplyNums multiplies two numbers and passes the result to the callback.
 function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x,y)
 }
 
-function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
+let mult= (x,y)=>x*y
+console.log(multiplyNums(5,8,mult))
+
+// contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+function contains(item, list, cb) {
+  return cb (item,list)
+  
 }
+
 
 /* STRETCH PROBLEM */
 
